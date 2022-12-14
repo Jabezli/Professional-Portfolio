@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --background:#19425e;
+    --word:rgb(163,158,158);
+    --bisque: bisque;   
+    --momospace: monospace;
+    --border1: 5px solid red;  
+
+}
+
+
+body{
+    margin:0px auto;
+    max-width:1600px;
+    line-height: 1.3;
+    font-family:var(--momospace);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #010113; */
+    background-color: rgba(1, 1, 19, 0.9);
+}
+
+h2{
+    font-size:230%;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+
+    /* position: absolute; this was to make the img under section 1 to cover the header area, but I don't use an image any more.
+    removing it will have a better responsive layout because now header occupies an area and it won't overlap with section 1 when zoom*/
+}
+
+header nav ul{
+    border:var(--border1);
+    padding:10px;
+    display:flex;
+    flex-wrap: wrap;
+    list-style: none;
+} 
+
+header nav li a{
+    text-decoration: none;
+    color: bisque;
+    font-family: var(--momospace);
+    font-size:120%;
+    padding: 0 20px;
+}
+
+h1{
+    padding:20px;
+    font-family: var(--momospace);
+    text-align:left;
+    font-size:300%;
+    color:var(--bisque);
+    
+}
+
+figure{
+    position: relateve;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-about .divimg{
+    padding:65px;
+
+}
+
+figure img{
+    /* display:flex; */
+    /* justify-content: center; i dont need this because it is not a container*/
+    height:400px;
+    width:300px;
+    margin: 5%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 2px 1px rgba(77, 111, 150, 0.76);
+}
+
+
+
+.section-about{
+    padding:0 6%;
+    padding-top: 80px;
+    /* background: url(/assets/images/Section-About.jpg) center no-repeat; */
+    background-size: cover;
+    /* height: 100vh; */
+    border:var(--border1);
+}
+
+
+.section-about h2{
+    color: var(--bisque);
+    text-align: center;
+}
+
+.section-about h2::after{
+    content:"Me";
+    padding-left:12px;   
+    font-family:cursive;
+    font-size:85%;
+}
+
+.about-me{
+    border:var(--border1);
+    padding:5%;
+    margin:2%;
+    font-size:130%;
+    color: white;
+
+}
+
+.projects{
+    border: var(--border1);
+    
+}
+
+.projects h2{
+    color: var(--bisque);
+    text-align: center;
+    margin:30px;
+}
+
+.project-grid{
+    /* height:600px; */
+    /* width:100%; */
+    padding:5%;
+    margin-top:30px;
+    border: var(--border1);
+    /* list-style: none; */
+    /* display:flex; */
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(400px, 1fr));
+    /* grid-template-rows:1fr 1fr; */
+    gap: 25px;
+}
+
+.inside-grid{
+    position:relative;
+    cursor: pointer;
+}
+
+.inside-grid a{
+    color:black;
+    text-decoration: none;
+    font-family:monospace;  /*try to use google font here*/
+    font-size:120%;
+  
+}
+
+
+
+.project-title{
+    position:absolute;
+    text-align: center;
+    top:50%;
+    left:38%;
+    background-color: rgba(69, 141, 177, 0.3);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.inside-grid img{
+    height:1fr;
+    width: 100%; 
+    
+}
+
+.inside-grid img:hover {
+    transition: transform 0.2s; 
+    transform: scale(1.1);
+}
+
+/* keep this below as a sample of overlay */
+/* .overlay{
+    content: "";
+    position:absolute;
+    display:none;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999;
+}
+
+.inside-grid:hover .overlay{
+    display:block;
+} */
+
+@media screen and (max-width: 700px) {
+    .project-grid {
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+  }
+
+@media screen and (max-width: 1000px) {
+   header, figure, nav ul{
+      flex-direction: column;
+    }
+}
+
+/* class & ID */
+/* .top-pic{
+    background-image: url(/assets/images/galaxy.jpg);
+} */
