@@ -72,7 +72,7 @@ h1{
 }
 
 figure{
-    position: relateve;
+    /* position: relateve; */
     display:flex;
     justify-content: center;
     align-items: center;
@@ -87,7 +87,7 @@ figure img{
     /* display:flex; */
     /* justify-content: center; i dont need this because it is not a container*/
     height:400px;
-    width:300px;
+    width: auto;
     margin: 5%;
     border-radius: 10px;
     box-shadow: 5px 5px 2px 1px rgba(77, 111, 150, 0.76);
@@ -139,7 +139,7 @@ figure img{
     list-style: none;
     /* display:flex; */
     display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns:repeat(auto-fill, minmax(350px, 1fr));
     /* grid-template-rows:1fr 1fr; */
     gap: 25px;
 }
@@ -252,12 +252,20 @@ footer{
 
 @media screen and (max-width: 700px) {
     .project-grid {
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     }
   }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 850px) {
    header, figure, nav ul{
       flex-direction: column;
+    }
+    nav ul{
+        text-align: center;
+        line-height: 1.8;
+    } /*this will be updated to drop down menu in the future*/
+    
+    .divimg{
+        justify-content: center;
     }
 }
