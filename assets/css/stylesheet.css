@@ -10,6 +10,7 @@
     --bisque: bisque;   
     --momospace: monospace;
     --border1: 5px solid red;  
+    /* keep all border1 for furture box arrangement */
 
 }
 
@@ -23,12 +24,13 @@ body{
     flex-direction: column;
     justify-content: center;
     /* background-color: #010113; */
-    background-color: rgba(1, 1, 19, 0.9);
+    /* background-color: rgba(1, 1, 19, 0.9); */
+    background-color: #f5f2e9;
 }
 
 h2{
     font-size:230%;
-    color:var(--bisque);
+    color:black;
     text-align: center;
     margin:30px;
 }
@@ -44,7 +46,7 @@ header{
 }
 
 header nav ul{
-    border:var(--border1);
+    
     padding:10px;
     display:flex;
     flex-wrap: wrap;
@@ -53,7 +55,8 @@ header nav ul{
 
 header nav li a{
     text-decoration: none;
-    color: bisque;
+    font-weight: bold;
+    color: black;
     font-family: var(--momospace);
     font-size:120%;
     padding: 0 20px;
@@ -64,7 +67,7 @@ h1{
     font-family: var(--momospace);
     text-align:left;
     font-size:300%;
-    color:var(--bisque);
+    color:black;
     
 }
 
@@ -98,7 +101,7 @@ figure img{
     /* background: url(/assets/images/Section-About.jpg) center no-repeat; */
     background-size: cover;
     /* height: 100vh; */
-    border:var(--border1);
+    
 }
 
 
@@ -112,16 +115,16 @@ figure img{
 }
 
 .about-me{
-    border:var(--border1);
+    
     padding:5%;
     margin:2%;
     font-size:130%;
-    color: white;
+    color: black;
 
 }
 
 .projects{
-    border: var(--border1);
+    /* border: var(--border1);  */
     
 }
 
@@ -132,8 +135,8 @@ figure img{
     /* width:100%; */
     padding:5%;
     margin-top:30px;
-    border: var(--border1);
-    /* list-style: none; */
+    /* border: var(--border1); */
+    list-style: none;
     /* display:flex; */
     display:grid;
     grid-template-columns:repeat(auto-fill, minmax(400px, 1fr));
@@ -145,6 +148,7 @@ figure img{
     position:relative;
     cursor: pointer;
 }
+
 
 .inside-grid a{
     color:black;
@@ -169,12 +173,14 @@ figure img{
 .inside-grid img{
     height:1fr;
     width: 100%; 
+    box-shadow: 10px 5px 5px rgba(0,0,0,0.5);
     
 }
 
 .inside-grid img:hover {
     transition: transform 0.2s; 
-    transform: scale(1.1);
+    transform: scale(1.04);
+    box-shadow: none;
 }
 
 /* keep this below as a sample of overlay */
@@ -197,22 +203,22 @@ figure img{
 } */
 
 .section-contact{
-    border: var(--border1);
+    /* border: var(--border1); */
     display:block;
 }
 
 .p-contact{
-    border:var(--border1);
+    
     padding:5%;
     margin:2%;
     font-size:130%;
-    color: white;
+    color:black;
     text-align: center;
 }
 
 .email-link{  
     font-size:30px;
-    border: var(--border1);
+    /* border: var(--border1); */
     padding:10px;
     position:relative;
     text-decoration: none;
@@ -237,8 +243,9 @@ figure img{
 
 footer{
     text-align: center;
-    color: var(--bisque);
-    
+    color: black;
+    font-style: italic;
+
 }
 
 
