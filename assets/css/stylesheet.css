@@ -49,6 +49,7 @@ header nav ul{
     
     padding:10px;
     display:flex;
+    justify-content: center;
     flex-wrap: wrap;
     list-style: none;
 } 
