@@ -6,7 +6,7 @@
 * Please feel free to leave your comments under ISSUE.
 
 ## Usage
-* To visit the website, please [Click Here](https://jabezli.github.io/Professional-Portfolio/#)
+* To visit the website, please [Click Here](https://jabezli.github.io/Professional-Portfolio/)
 * The navigation bar will take you to corresponding topics.
 * Resize screen using Chrome Dev tools to test responsive layout.
 * ![](/assets/images/Screenshot.png)
