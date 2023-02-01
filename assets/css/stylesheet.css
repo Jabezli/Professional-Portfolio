@@ -146,6 +146,10 @@ figure img{
 }
 
 .inside-grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position:relative;
     cursor: pointer;
 }
@@ -164,8 +168,6 @@ figure img{
 .project-title{
     position:absolute;
     text-align: center;
-    top:50%;
-    left:38%;
     background-color: rgba(69, 141, 177, 0.3);
     cursor: pointer;
     z-index: 2;
